@@ -2,6 +2,9 @@ import api from "./api";
 import { MesoProps, RegiaoProps, UfProps } from "../types";
 
 class Ibge {
+    regioes() {
+      throw new Error("Method not implemented.");
+    }
     async getRegioes(): Promise<RegiaoProps[]> {
         await sleep(1000);
         const { data } = await api.get("/regioes?orderBy=nome");

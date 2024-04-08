@@ -3,14 +3,18 @@ import { ContextProps, RegiaoProps } from "../types";
 import ibge from "../services/ibge";
 
 
-const ctx = createContext({} as ContextProps);
+export const ctx = createContext({} as ContextProps);
 
-function Provedor({ children }: any) {
+export function Provedor({ children }: any) {
   const [regioes, setRegioes] = useState([] as RegiaoProps[]);
 
-  useEffect( () => {
-    ibge.regioes().then( r => setRegioes(r) );
-  });
+setRegioes([
+  {"id":5,"sigla":"CO","nome":"Centro-Oeste"},
+  {"id":2,"sigla":"NE","nome":"Nordeste"},
+  {"id":1,"sigla":"N","nome":"Norte"},
+  {"id":3,"sigla":"SE","nome":"Sudeste"},
+  {"id":4,"sigla":"S","nome":"Sul"}
+])
 
   return (
     <ctx.Provider value={{regioes}}>
@@ -19,4 +23,4 @@ function Provedor({ children }: any) {
   );
 }
 
-export { Provedor, ctx };
+

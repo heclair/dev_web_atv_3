@@ -8,3 +8,17 @@ export interface ContextProps {
       sigla: string;
       nome: string;
   }
+
+  export interface UfProps{
+    id: number;
+    sigla: string;
+    nome: string;
+    regiao: RegiaoProps;
+  }
+
+
+  export interface MesoProps{
+    id: number;
+    nome: string;
+    uf: UfProps;
+  }
