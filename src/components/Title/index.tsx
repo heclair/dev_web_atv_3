@@ -4,6 +4,7 @@ export default function Title({children}:any){
     return <Sld>{children}</Sld>;
 }
 
-const Sld = styled.h4`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+const Sld = styled.h3`
+    text-align:center;
+    width: 100%;    
 `;

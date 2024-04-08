@@ -4,7 +4,13 @@ export default function Item({children}:any){
     return <Sld>{children}</Sld>;
 }
 
-const Sld = styled.p`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;`
+const Sld = styled.div`
+    display: flex;    
+    cursor: pointer;
+    margin: 5px 0px;
+
+    &:hover{
+        color: orange;
+    }
     
-    ;
+    `;

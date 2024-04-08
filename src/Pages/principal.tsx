@@ -6,7 +6,9 @@ export default function Principal() {
   return (
     <>
         <Title> Regiões </Title>
-      <p>Principal {JSON.stringify(regioes)}</p>
+      
     </>
   );
 }
+
+//<p>Principal {JSON.stringify(regioes)}</p>
